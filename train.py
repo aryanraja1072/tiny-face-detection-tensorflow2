@@ -24,7 +24,7 @@ def main():
     if TRAINABLE:
         learning_rate /= 10
 
-    optimizer = tf.keras.optimizers.SGD(lr=learning_rate, decay=cfg.TRAIN.LR_DECAY, momentum=0.9, nesterov=False)
+    optimizer = tf.keras.optimizers.legacy.SGD(lr=learning_rate, decay=cfg.TRAIN.LR_DECAY, momentum=0.9, nesterov=False)
     model.compile(loss=detect_loss(), optimizer=optimizer, metrics=[])
 
     checkpoint = tf.keras.callbacks.ModelCheckpoint("model-{val_iou:.2f}.h5", monitor="val_iou", verbose=1,
