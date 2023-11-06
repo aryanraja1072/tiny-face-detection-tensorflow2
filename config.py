@@ -14,8 +14,8 @@ __C.NN.IOU_LOSS_THRESH = 0.5
 
 # create Train options dict
 __C.TRAIN = EasyDict()
-__C.TRAIN.DATA_PATH = "./data/WIDER_train/images/"
-__C.TRAIN.ANNOTATION_PATH = "./data/wider_face_split/wider_face_train_bbx_gt.txt"
+__C.TRAIN.DATA_PATH = "/content/tiny-face-detection-tensorflow2/data/WIDER_train/images/"
+__C.TRAIN.ANNOTATION_PATH = "/content/tiny-face-detection-tensorflow2/data/wider_face_split/wider_face_train_bbx_gt.txt"
 __C.TRAIN.PATIENCE = 30  # for EarlyStopping
 __C.TRAIN.EPOCHS = 150
 __C.TRAIN.BATCH_SIZE = 16
@@ -25,7 +25,7 @@ __C.TRAIN.LR_DECAY = 0.0001
 
 # create TEST options dict
 __C.TEST = EasyDict()
-__C.TEST.DATA_PATH = "./data/WIDER_val/images/"
-__C.TEST.ANNOTATION_PATH = "./data/wider_face_split/wider_face_val_bbx_gt.txt"
+__C.TEST.DATA_PATH = "/content/tiny-face-detection-tensorflow2/data/WIDER_val/images/"
+__C.TEST.ANNOTATION_PATH = "/content/tiny-face-detection-tensorflow2/data/wider_face_split/wider_face_val_bbx_gt.txt"
 __C.TEST.DATA_AUG = False
-__C.TEST.DETECTED_IMAGE_PATH = "./output/detection/"
+__C.TEST.DETECTED_IMAGE_PATH = "/content/tiny-face-detection-tensorflow2/output/detection/"
